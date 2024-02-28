@@ -512,8 +512,8 @@ short car_cnt = 0;
 
 int main(int argc, char **argv)
 {
-    open_read_port("can1");
-    open_write_port("can1");
+    open_read_port("can0");
+    open_write_port("can0");
 
 #ifdef _DEBUG
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
