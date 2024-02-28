@@ -1,1 +1,1 @@
-# can_tx2
+# can_orin_nano
