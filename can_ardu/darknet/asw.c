@@ -2,7 +2,6 @@
 unsigned char len;
 unsigned long id;
 unsigned char buf[8];
-unsigned char sum_buf[8];
 #include <stdint.h>
 
 

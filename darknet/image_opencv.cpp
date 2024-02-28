@@ -1032,7 +1032,7 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
                 frame.data[7] = cnt_tmp;
 
             /*==============Fill your code to write data =================*/
-                usleep(300000);
+                usleep(150000);
     
                 ssize_t nbytes1 = write(write_soc,&frame,sizeof(struct can_frame));
     
