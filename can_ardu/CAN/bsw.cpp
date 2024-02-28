@@ -8,7 +8,7 @@
 #include "mcp2515_can.h"
 
 
-#define TIMER1_US	1000000U	/* 1 sec */
+#define TIMER1_US	10000U	
 
 #define LEN_BUF 128
 mcp2515_can CAN(9);
