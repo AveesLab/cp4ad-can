@@ -1006,30 +1006,22 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
                 cnt +=1;
             /*==============Fill your code to write data =================*/
     
-                struct can_frame frame;
-                frame.can_id = 0x123;
-                frame.can_dlc = 8;
-    
-		unsigned char c_ida, c_idb, acca, accb, center_x, center_y, cnt_tmp;
-                float factor1 = 1000.0f;
-                float factor2 = 100.0f;
-    
-                c_ida = class_ >> 8;
-                c_idb = class_;
-                acca = (uint16_t)(accuracy * factor1) >> 8;
-                accb = (uint16_t)(accuracy * factor1);
-                center_x = (uint8_t)(x_center * factor2);
-                center_y = (uint8_t)(y_center * factor2);
 
-		frame.data[0] = c_ida;
-                frame.data[1] = c_idb;
-                frame.data[2] = acca;
-                frame.data[3] = accb;
-                frame.data[4] = center_x;
-                frame.data[5] = center_y;
-                cnt_tmp = cnt >> 8;
-                frame.data[6] = cnt;
-                frame.data[7] = cnt_tmp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    
 
             /*==============Fill your code to write data =================*/
                 usleep(150000);
