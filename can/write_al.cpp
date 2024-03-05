@@ -54,29 +54,14 @@ void write_port()
     int_1 = rand() % 4294967295;
 
     /*============== Fill your code to write data =================*/
-    struct can_frame frame;
-    frame.can_id = 0x123;
-    frame.can_dlc = 8;
 
-    unsigned char short_1a, short_2a, short_1b, short_2b, int_1a, int_1b, int_1c, int_1d ;
-    
-    short_1a = short_1 >> 8;
-    short_1b = short_1;
-    short_2a = short_2 >> 8;
-    short_2b = short_2;
-    int_1a = int_1 >> 24;
-    int_1b = int_1 >> 16;
-    int_1c = int_1 >> 8;
-    int_1d = int_1;
 
-    frame.data[0] = short_1a;
-    frame.data[1] = short_1b;
-    frame.data[2] = short_2a;
-    frame.data[3] = short_2b;
-    frame.data[4] = int_1a;
-    frame.data[5] = int_1b;
-    frame.data[6] = int_1c;
-    frame.data[7] = int_1d;
+
+
+
+
+
+	
 
     
     ssize_t nbytes1 = write(soc, &frame, sizeof(struct can_frame));
