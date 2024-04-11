@@ -65,12 +65,11 @@ void read_port()
                 if(recvbytes) { 
                     unsigned int sum = 0;
                     /* ==================== Fill your code to receive data ==================*/
-	 	    if(frame.can_id == 0x456){		       
- 		    	sum = (frame.data[0] << 24) + (frame.data[1] << 16) + (frame.data[2] << 8) + frame.data[3];
-		    	printf("-------------------------------------------\n");
-			printf("message ID: %x\n", frame.can_id);
-			printf("sum = %u\n", sum);
-		    }
+
+
+
+
+			
                 }
                   
                         
