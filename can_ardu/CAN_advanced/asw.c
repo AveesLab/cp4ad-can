@@ -15,7 +15,7 @@ ISR2(TimerISR)
 
 
 unsigned short short_1, short_2;
-uint32_t int_1;
+uint32_t int_1, sum;
 
 
 TASK(Task1) {
