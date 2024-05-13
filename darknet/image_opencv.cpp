@@ -1003,9 +1003,13 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
                 float accuracy = dets[i].prob[class_id];
                 float x_center = b.x;
                 float y_center = b.y;
-                cnt +=1;
-            /*==============Fill your code to write data =================*/
-    
+
+		if(class_id == 2) {
+		    cnt +=1;
+		    struct can_frame frame;
+		    frame.can_id = 0x123;
+		    frame.can_dlc = 8;
+	    /*==============Fill your code to write data =================*/
 
 
 
@@ -1021,16 +1025,16 @@ extern "C" void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, flo
 
 
 
-		    
 
-            /*==============Fill your code to write data =================*/
-                usleep(150000);
-    
-                ssize_t nbytes1 = write(write_soc,&frame,sizeof(struct can_frame));
-    
-                if(nbytes1 < 1) {
-                    printf("send error!\n");
-                }
+
+	    /*==============Fill your code to write data =================*/		
+		    usleep(150000);
+                    ssize_t nbytes1 = write(write_soc,&frame,sizeof(struct can_frame)); 
+		}
+             
+                //if(nbytes1 < 1) {
+                //    printf("send error!\n");
+                //}
 
                 //int b_x_center = (left + right) / 2;
                 //int b_y_center = (top + bot) / 2;
