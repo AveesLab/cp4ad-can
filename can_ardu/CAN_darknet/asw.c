@@ -21,9 +21,10 @@ TASK(Task1) {
 	
 	if(CAN_checkMsg() == CAN_MSGAVAIL)
 	{
+		CAN_readMsg(&id, &len, buf);
 		/*============================ Fill your code to receive data ==============================*/
 		
-
+		
 
 
 
