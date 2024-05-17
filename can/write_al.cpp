@@ -54,6 +54,7 @@ void write_port()
     int_1 = rand() % 4294967295;
 
     /*============== Fill your code to write data =================*/
+    unsigned char short_1a, short_1b, short_2a, short_2b, int_1a, int_1b, int_1c, int_1d
 
     short_1a = short_1 >> 8;	
     short_1b = short_1;
