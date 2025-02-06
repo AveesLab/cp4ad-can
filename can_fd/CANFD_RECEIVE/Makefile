@@ -9,7 +9,7 @@ OUT_DIR='out'
 all: build
 
 build:
-	#cd $(BUILD_DIR); sed -i 's/cygpath -ms ""/cygpath -ms "C:\\Arduino"/g' makefile; make BINDIR=$(ARDUINO_DIR) CPPFLAGS="-I../lib/ACAN2517FD"
+
 	cd $(BUILD_DIR); sed -i 's/cygpath -ms ""/cygpath -ms "C:\\Arduino"/g' makefile; \
 	make BINDIR=$(ARDUINO_DIR) CPPFLAGS="-I../lib/ACAN2517FD" CXXFLAGS="-I../lib/ACAN2517FD"
 

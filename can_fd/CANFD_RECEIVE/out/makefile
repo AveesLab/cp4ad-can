@@ -111,7 +111,7 @@ ifeq    ($(shell uname), Linux)
 export  ARDUINO_SDK_FILES   = $(strip )
 export  ARDUINO_PHY_PORT    = /dev/$(ARDUINO_PORT)
 else    # Linux
-export  ARDUINO_SDK_FILES   = $(shell cygpath -ms "C:\Arduino")
+export  ARDUINO_SDK_FILES   = $(shell cygpath -ms "")
 export  ARDUINO_PHY_PORT    = \\\\.\\$(ARDUINO_PORT)
 endif   # Linux
 
