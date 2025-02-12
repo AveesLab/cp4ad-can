@@ -28,7 +28,7 @@ byte CAN_sendMsg(can_fd_msg msg)
 	
 	CANFDMessage message;
     message.id = msg.id;
-    message.len = strlen(msg.buf);
+	message.len = msg.len;
     memcpy(message.data, msg.buf, message.len);
 
     return CAN.tryToSend(message);
@@ -41,15 +41,16 @@ byte CAN_checkMsg()
 	return CAN.available();
 }
 
-byte CAN_readMsg( unsigned long *id, unsigned char *len, unsigned char *buf)
+byte CAN_readMsg(can_fd_msg *msg)
 {
 
 	CANFDMessage message;
     if (CAN.available()) {
         CAN.receive(message);
-		*id=message.id;
-		*len=message.len;
-		memcpy(buf,message.data,message.len);
+		msg->id=message.id;
+		msg->len=message.len;
+		
+		msg->buf=message.data;
         return true;
     }
     return false;
@@ -93,6 +94,7 @@ void setup(void)
 
 	while (CAN_OK != begin()) {
 		printfSerial("init fail\n");
+		printfSerial("%d\n",begin());
 	}
 	OsEE_atmega_startTimer1(TIMER1_US);
 	printfSerial("CAN init\n");

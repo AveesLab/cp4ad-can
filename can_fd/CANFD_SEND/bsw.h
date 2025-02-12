@@ -17,19 +17,20 @@
 extern "C"{
 #endif
 
-
-void mdelay(unsigned long delay_ms);
-void printfSerial(const char *fmt, ... );
-byte CAN_sendMsg(unsigned long id,byte len,const byte* buf);
-byte CAN_checkMsg();
-byte CAN_readMsg( unsigned long *id, unsigned char *len, unsigned char *buf);
-
 struct can_fd_msg {
     unsigned char len;
     unsigned long id;
     unsigned char* buf;
     unsigned char idx;
-}
+};
+
+void mdelay(unsigned long delay_ms);
+void printfSerial(const char *fmt, ... );
+byte CAN_sendMsg(struct can_fd_msg msg);
+byte CAN_checkMsg();
+byte CAN_readMsg(struct can_fd_msg* msg);
+
+
 
 #ifdef __cplusplus
 }

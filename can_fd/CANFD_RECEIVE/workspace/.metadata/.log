@@ -6991,3 +6991,1704 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-02-06 17:05:26.259
 !MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 15:48:24.859 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 15:48:26.061
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 15:48:26.061
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 15:48:26.201
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 15:48:26.205
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 15:48:26.211
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 15:48:26.213
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 15:48:26.217
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:30.757
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:30.757
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:30.824
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:30.824
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:31.191
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:31.191
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:31.208
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 15:48:31.208
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:06:09.670 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:06:11.364
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:06:11.364
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:06:12.800
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:06:12.800
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:06:12.814
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:06:12.817
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:06:13.015
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:29.733
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:29.733
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:29.802
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:29.802
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:30.186
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:30.188
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:30.190
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:06:30.192
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:08:12.422 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:08:13.571
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:08:13.576
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:08:13.706
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:08:13.706
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:08:13.706
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:08:13.706
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:08:13.706
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.290
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.295
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.374
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.374
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.808
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.808
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.808
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:08:18.808
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:33:39.329 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:33:40.464
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:33:40.464
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:33:40.614
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:33:40.617
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:33:40.619
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:33:40.619
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:33:40.619
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.346
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.364
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.431
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.431
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.814
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.814
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.829
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:33:45.830
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:35:33.962 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:35:35.121
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:35:35.121
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:35:35.272
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:35:35.272
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:35:35.272
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:35:35.287
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:35:35.291
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:39.901
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:39.909
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:39.977
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:39.980
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:40.383
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:40.385
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:40.387
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:35:40.388
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:36:52.897 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:36:54.175
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:36:54.177
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:36:54.327
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:36:54.327
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:36:54.327
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:36:54.327
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:36:54.342
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:58.994
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:58.994
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.071
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.074
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.444
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.444
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.444
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:36:59.444
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:48:28.657 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:48:29.959
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:48:29.965
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:48:30.128
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:48:30.128
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:48:30.128
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:48:30.128
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:48:30.128
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:34.743
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:34.760
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:34.827
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:34.827
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:35.210
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:35.210
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:35.210
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:48:35.210
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 16:58:05.081 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 16:58:06.267
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 16:58:06.270
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 16:58:06.384
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 16:58:06.399
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 16:58:06.401
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 16:58:06.401
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 16:58:06.401
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:10.951
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:10.951
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.018
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.018
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.388
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.388
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.388
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 16:58:11.388
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+!SESSION 2025-02-12 17:24:28.605 -----------------------------------------------
+eclipse.buildId=4.8.0.I20180611-0500
+java.version=19.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
+
+!ENTRY javax.ws.rs 4 0 2025-02-12 17:24:29.847
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
+  Unresolved requirement: Import-Package: javax.xml.bind.annotation
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-02-12 17:24:29.847
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.ui; bundle-version="[4.0.0,5.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.ui; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.ui [304]
+         Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+           -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-02-12 17:24:29.964
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
+  Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+    -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+       javax.ws.rs [32]
+         Unresolved requirement: Import-Package: javax.xml.bind.annotation
+  Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+    -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-02-12 17:24:29.981
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
+  Unresolved requirement: Require-Bundle: org.eclipse.linuxtools.docker.core; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.linuxtools.docker.core; bundle-version="4.0.0.201806122135"; singleton:="true"
+       org.eclipse.linuxtools.docker.core [302]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.1"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+              javax.ws.rs [32]
+                Unresolved requirement: Import-Package: javax.xml.bind.annotation
+         Unresolved requirement: Import-Package: javax.ws.rs.core; version="2.0.1"
+           -> Export-Package: javax.ws.rs.core; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs,  javax.xml.bind.annotation,  javax.xml.bind.annotation.adapters,  javax.xml.namespace"
+  Unresolved requirement: Require-Bundle: com.spotify.docker.client; bundle-version="3.6.8"
+    -> Bundle-SymbolicName: com.spotify.docker.client; bundle-version="8.9.2.v20180207-1730"
+       com.spotify.docker.client [21]
+         Unresolved requirement: Import-Package: javax.ws.rs; version="2.0.0"
+           -> Export-Package: javax.ws.rs; bundle-symbolic-name="javax.ws.rs"; bundle-version="2.0.1.v201504171603"; version="2.0.1"; uses:="javax.ws.rs.core"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-02-12 17:24:29.981
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [349]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-02-12 17:24:29.981
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.0.v20180221-1812"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [335]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [70]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.0.v20170629-1728"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [349]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-02-12 17:24:29.981
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [70]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1682)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1624)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1555)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:34.655
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:34.660
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:34.715
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:34.715
+!MESSAGE No value found for the property 'preference_avr8__path_for_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:35.115
+!MESSAGE No value found for the property 'preference_avr8__serial_port_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:35.115
+!MESSAGE No value found for the property 'preference_avr8__serial_baudrate_for_arduino'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:35.115
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-02-12 17:24:35.131
+!MESSAGE No value found for the property 'preference_avr8__path_for_arduino_sdk'.

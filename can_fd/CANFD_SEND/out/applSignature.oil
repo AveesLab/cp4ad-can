@@ -48,7 +48,7 @@ CPU mySystem {
 		};
 		AUTOSTART = TRUE {
 			ALARMTIME = 5;
-			CYCLETIME = 1;
+			CYCLETIME = 100;
 		};
 	};
 	ISR TimerISR {

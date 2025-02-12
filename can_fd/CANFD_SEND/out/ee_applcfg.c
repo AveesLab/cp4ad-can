@@ -266,7 +266,7 @@ static VAR(OsEE_autostart_trigger_info, OS_CONST)
   {
     /* .p_trigger_db          = */  &osEE_alarm_db_array[0U],
     /* .first_tick_parameter  = */  (5U),
-    /* .first_tick_parameter  = */  (1U)
+    /* .first_tick_parameter  = */  (100U)
   }
 };
 

@@ -24,31 +24,31 @@ byte begin() {
 }
 
 
-byte CAN_sendMsg(unsigned long id,byte len,const char* buf)
+byte CAN_sendMsg(can_fd_msg msg)
 {
-	//return CAN.sendMsgBuf(id,0,0,len,buf,0);
+	
 	CANFDMessage message;
-    message.id = id;
-    message.len = strlen(buf);
-    memcpy(message.data, buf, message.len);
+    message.id = msg.id;
+	message.len = msg.len;
+    memcpy(message.data, msg.buf, message.len);
 
     return CAN.tryToSend(message);
 
 }
-
 byte CAN_checkMsg()
 {
 	return CAN.available();
 }
-byte CAN_readMsg( unsigned long *id, unsigned char *len, unsigned char *buf)
+byte CAN_readMsg(can_fd_msg *msg)
 {
 
 	CANFDMessage message;
     if (CAN.available()) {
         CAN.receive(message);
-		*id=message.id;
-		*len=message.len;
-		memcpy(buf,message.data,message.len);
+		msg->id=message.id;
+		msg->len=message.len;
+		
+		msg->buf=message.data;
         return true;
     }
     return false;
