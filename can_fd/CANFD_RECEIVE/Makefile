@@ -5,11 +5,11 @@ BUILD_DIR='out'
 ELF_FILE=erika3app.elf
 ERIKA_DIR='erika'
 OUT_DIR='out'
-
+# cd $(BUILD_DIR); sed -i 's/cygpath -ms ""/cygpath -ms "C:\\Arduino"/g' makefile; make BINDIR=$(ARDUINO_DIR) CPPFLAGS="-I../lib/ACAN2517FD"
 all: build
 
 build:
-	#cd $(BUILD_DIR); sed -i 's/cygpath -ms ""/cygpath -ms "C:\\Arduino"/g' makefile; make BINDIR=$(ARDUINO_DIR) CPPFLAGS="-I../lib/ACAN2517FD"
+	
 	cd $(BUILD_DIR); sed -i 's/cygpath -ms ""/cygpath -ms "C:\\Arduino"/g' makefile; \
 	make BINDIR=$(ARDUINO_DIR) CPPFLAGS="-I../lib/ACAN2517FD" CXXFLAGS="-I../lib/ACAN2517FD"
 
@@ -32,6 +32,8 @@ export  ARDUINO_SDK_FILES   = $(strip )
 export  ARDUINO_PHY_PORT    = /dev/$(ARDUINO_PORT)
 else    # Linux
 export ARDUINO_SDK_FILES   = $(shell cygpath -ms "c:\Arduino")
+# export ARDUINO_SDK_FILES = C:/Arduino/hardware/tools/avr/bin
+
 export ARDUINO_PHY_PORT    = COM3
 endif   # Linux
 
