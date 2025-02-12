@@ -28,7 +28,9 @@ void mdelay(unsigned long delay_ms);
 void printfSerial(const char *fmt, ... );
 byte CAN_sendMsg(struct can_fd_msg msg);
 byte CAN_checkMsg();
-byte CAN_readMsg( struct can_fd_msg* msg);
+byte CAN_readMsg(struct can_fd_msg* msg);
+
+
 
 #ifdef __cplusplus
 }

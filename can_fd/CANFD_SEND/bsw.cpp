@@ -23,7 +23,6 @@ byte begin() {
     return errorCode;
 }
 
-
 byte CAN_sendMsg(can_fd_msg msg)
 {
 	
@@ -35,10 +34,13 @@ byte CAN_sendMsg(can_fd_msg msg)
     return CAN.tryToSend(message);
 
 }
+
 byte CAN_checkMsg()
 {
+	//check receive buffer
 	return CAN.available();
 }
+
 byte CAN_readMsg(can_fd_msg *msg)
 {
 
@@ -92,6 +94,7 @@ void setup(void)
 
 	while (CAN_OK != begin()) {
 		printfSerial("init fail\n");
+		printfSerial("%d\n",begin());
 	}
 	OsEE_atmega_startTimer1(TIMER1_US);
 	printfSerial("CAN init\n");
