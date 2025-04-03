@@ -72,7 +72,7 @@ TASK(Task1) {
 
 	if(ticks%3==2)
 	{
-		//filtered msg
+		//Not received msg
 		struct can_msg send_msg;
 	
 		send_msg.id = 0x060;
