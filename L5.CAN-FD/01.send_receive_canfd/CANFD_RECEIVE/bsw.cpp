@@ -32,7 +32,7 @@ void pad(can_fd_msg *c_msg)
 
 
 byte begin() {
-    ACAN2517FDSettings settings (ACAN2517FDSettings::OSC_20MHz, 125UL * 1000UL, DataBitRateFactor::x8) ;
+    ACAN2517FDSettings settings (ACAN2517FDSettings::OSC_20MHz, 500UL * 1000UL, DataBitRateFactor::x8) ;
     settings.mRequestedMode = ACAN2517FDSettings::NormalFD;
 	settings.mDriverTransmitFIFOSize = 1 ;
   	settings.mDriverReceiveFIFOSize = 1 ;
@@ -61,17 +61,22 @@ byte CAN_checkMsg()
 
 byte CAN_readMsg(can_fd_msg *msg)
 {
+    CANFDMessage message;
+    if (!CAN.available()) return false;
+    CAN.receive(message);
+    msg->id = message.id;
+    msg->len = message.len;
 
-	CANFDMessage message;
-    if (CAN.available()) {
-        CAN.receive(message);
-		msg->id=message.id;
-		msg->len=message.len;
-		
-		msg->buf=message.data;
-        return true;
+    
+    msg->buf = (byte*)malloc(msg->len);
+    if (!msg->buf) {
+        printfSerial("Memory allocation failed in CAN_readMsg\n");
+        return false;
     }
-    return false;
+
+    memcpy(msg->buf, message.data, msg->len); 
+
+    return true;
 }
 
 void mdelay(unsigned long delay_ms)

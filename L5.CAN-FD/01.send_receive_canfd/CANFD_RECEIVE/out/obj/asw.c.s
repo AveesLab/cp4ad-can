@@ -57,8 +57,8 @@ FuncTask1:
 	dec r24
 	brne 0b
 	call CAN_checkMsg
-	cpi r24,lo8(1)
-	brne .L4
+	tst r24
+	breq .L4
 	movw r24,r16
 	call CAN_readMsg
 	tst r24
@@ -111,6 +111,9 @@ FuncTask1:
 	push r25
 	push r24
 	call printfSerial
+	ldd r24,Y+6
+	ldd r25,Y+7
+	call free
 	pop __tmp_reg__
 	pop __tmp_reg__
 .L4:

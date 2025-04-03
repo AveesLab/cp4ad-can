@@ -1,6 +1,6 @@
 obj/SPI.cpp.o: \
- /cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/test/01B7CE~1.SEN/CANFD_~1/SPI.cpp \
- /cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/test/01B7CE~1.SEN/CANFD_~1/SPI.h \
+ /cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/L5D26D~1.CAN/01B7CE~1.SEN/CANFD_~1/SPI.cpp \
+ /cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/L5D26D~1.CAN/01B7CE~1.SEN/CANFD_~1/SPI.h \
  /cygdrive/c/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h \
  /cygdrive/c/Arduino/hardware/arduino/avr/cores/arduino/binary.h \
  /cygdrive/c/Arduino/hardware/arduino/avr/cores/arduino/WCharacter.h \
@@ -13,7 +13,7 @@ obj/SPI.cpp.o: \
  /cygdrive/c/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h \
  /cygdrive/c/Arduino/hardware/arduino/avr/variants/standard/pins_arduino.h
 
-/cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/test/01B7CE~1.SEN/CANFD_~1/SPI.h:
+/cygdrive/c/Users/HONGKE~1/DOCUME~1/GitHub/L5D26D~1.CAN/01B7CE~1.SEN/CANFD_~1/SPI.h:
 
 /cygdrive/c/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h:
 

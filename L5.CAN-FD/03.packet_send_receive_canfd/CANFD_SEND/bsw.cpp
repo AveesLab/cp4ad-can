@@ -16,9 +16,23 @@ ACAN2517FD CAN(9,SPI, 2);
 
 void send_simple_tlv(uint32_t can_id, uint8_t value_type, const uint8_t* value_data, uint16_t value_len)
 {
+	/////////////////////write here /////////////////////////////
 
 
 
+	////////////////////////////////////////////////////////////
+    printfSerial("--------------------------------------------------\n");
+    printfSerial("CAN ID       : 0x%03X\n", msg.id);
+    printfSerial("Value_Type   : 0x%02X\n", msg.buf[0]);
+    printfSerial("Value_Len    : %d\n", value_len);
+    printfSerial("[VALUE]\n");
+    for (uint8_t i = 2; i < msg.len; i++) {
+        printfSerial("0x%02X ", msg.buf[i]);
+        if ((i - 2) % 8 == 7) {
+            printfSerial("\n");
+        }
+    }
+    printfSerial("\n");
 }
 
 

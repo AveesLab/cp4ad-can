@@ -227,9 +227,9 @@ _Z5beginv:
 	mov r14,__zero_reg__
 	mov r15,__zero_reg__
 	ldi r16,lo8(8)
-	ldi r18,lo8(72)
-	ldi r19,lo8(-24)
-	ldi r20,lo8(1)
+	ldi r18,lo8(32)
+	ldi r19,lo8(-95)
+	ldi r20,lo8(7)
 	ldi r21,0
 	ldi r22,lo8(4)
 	movw r24,r28
@@ -362,76 +362,6 @@ CAN_checkMsg:
 	ldi r25,hi8(CAN)
 	jmp _ZN10ACAN2517FD9availableEv
 	.size	CAN_checkMsg, .-CAN_checkMsg
-	.section	.text.CAN_readMsg,"ax",@progbits
-.global	CAN_readMsg
-	.type	CAN_readMsg, @function
-CAN_readMsg:
-	push r16
-	push r17
-	push r28
-	push r29
-	in r28,__SP_L__
-	in r29,__SP_H__
-	subi r28,72
-	sbc r29,__zero_reg__
-	in __tmp_reg__,__SREG__
-	cli
-	out __SP_H__,r29
-	out __SREG__,__tmp_reg__
-	out __SP_L__,r28
-/* prologue: function */
-/* frame size = 72 */
-/* stack size = 76 */
-.L__stack_usage = 76
-	movw r16,r24
-	movw r24,r28
-	adiw r24,1
-	call _ZN12CANFDMessageC1Ev
-	ldi r24,lo8(CAN)
-	ldi r25,hi8(CAN)
-	call _ZN10ACAN2517FD9availableEv
-	tst r24
-	breq .L25
-	movw r22,r28
-	subi r22,-1
-	sbci r23,-1
-	ldi r24,lo8(CAN)
-	ldi r25,hi8(CAN)
-	call _ZN10ACAN2517FD7receiveER12CANFDMessage
-	ldd r24,Y+1
-	ldd r25,Y+2
-	ldd r26,Y+3
-	ldd r27,Y+4
-	movw r30,r16
-	std Z+1,r24
-	std Z+2,r25
-	std Z+3,r26
-	std Z+4,r27
-	ldd r24,Y+8
-	st Z,r24
-	movw r24,r28
-	adiw r24,9
-	std Z+6,r25
-	std Z+5,r24
-	ldi r24,lo8(1)
-.L23:
-/* epilogue start */
-	subi r28,-72
-	sbci r29,-1
-	in __tmp_reg__,__SREG__
-	cli
-	out __SP_H__,r29
-	out __SREG__,__tmp_reg__
-	out __SP_L__,r28
-	pop r29
-	pop r28
-	pop r17
-	pop r16
-	ret
-.L25:
-	ldi r24,0
-	rjmp .L23
-	.size	CAN_readMsg, .-CAN_readMsg
 	.section	.text.mdelay,"ax",@progbits
 .global	mdelay
 	.type	mdelay, @function
@@ -470,12 +400,12 @@ mdelay:
 	mov r12,__zero_reg__
 	mov r13,__zero_reg__
 	movw r14,r12
-.L28:
+.L25:
 	cp r4,r12
 	cpc r5,r13
 	cpc r6,r14
 	cpc r7,r15
-	breq .L26
+	breq .L23
 	call millis
 	sub r22,r8
 	sbc r23,r9
@@ -485,7 +415,7 @@ mdelay:
 	cpc r23,__zero_reg__
 	cpc r24,__zero_reg__
 	cpc r25,__zero_reg__
-	brlo .L28
+	brlo .L25
 	ldi r24,-1
 	sub r12,r24
 	sbc r13,r24
@@ -494,8 +424,8 @@ mdelay:
 	call millis
 	movw r8,r22
 	movw r10,r24
-	rjmp .L28
-.L26:
+	rjmp .L25
+.L23:
 /* epilogue start */
 	pop r15
 	pop r14
@@ -560,6 +490,100 @@ printfSerial:
 	pop r28
 	ret
 	.size	printfSerial, .-printfSerial
+	.section	.rodata.CAN_readMsg.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"Memory allocation failed in CAN_readMsg\n"
+	.section	.text.CAN_readMsg,"ax",@progbits
+.global	CAN_readMsg
+	.type	CAN_readMsg, @function
+CAN_readMsg:
+	push r14
+	push r15
+	push r16
+	push r17
+	push r28
+	push r29
+	in r28,__SP_L__
+	in r29,__SP_H__
+	subi r28,72
+	sbc r29,__zero_reg__
+	in __tmp_reg__,__SREG__
+	cli
+	out __SP_H__,r29
+	out __SREG__,__tmp_reg__
+	out __SP_L__,r28
+/* prologue: function */
+/* frame size = 72 */
+/* stack size = 78 */
+.L__stack_usage = 78
+	movw r14,r24
+	movw r24,r28
+	adiw r24,1
+	call _ZN12CANFDMessageC1Ev
+	ldi r24,lo8(CAN)
+	ldi r25,hi8(CAN)
+	call _ZN10ACAN2517FD9availableEv
+	tst r24
+	breq .L32
+	movw r22,r28
+	subi r22,-1
+	sbci r23,-1
+	ldi r24,lo8(CAN)
+	ldi r25,hi8(CAN)
+	call _ZN10ACAN2517FD7receiveER12CANFDMessage
+	ldd r24,Y+1
+	ldd r25,Y+2
+	ldd r26,Y+3
+	ldd r27,Y+4
+	movw r30,r14
+	std Z+1,r24
+	std Z+2,r25
+	std Z+3,r26
+	std Z+4,r27
+	ldd r16,Y+8
+	st Z,r16
+	ldi r17,0
+	movw r24,r16
+	call malloc
+	movw r30,r14
+	std Z+6,r25
+	std Z+5,r24
+	sbiw r24,0
+	brne .L31
+	ldi r24,lo8(.LC0)
+	ldi r25,hi8(.LC0)
+	push r25
+	push r24
+	call printfSerial
+	pop __tmp_reg__
+	pop __tmp_reg__
+.L32:
+	ldi r24,0
+	rjmp .L29
+.L31:
+	movw r20,r16
+	movw r22,r28
+	subi r22,-9
+	sbci r23,-1
+	call memcpy
+	ldi r24,lo8(1)
+.L29:
+/* epilogue start */
+	subi r28,-72
+	sbci r29,-1
+	in __tmp_reg__,__SREG__
+	cli
+	out __SP_H__,r29
+	out __SREG__,__tmp_reg__
+	out __SP_L__,r28
+	pop r29
+	pop r28
+	pop r17
+	pop r16
+	pop r15
+	pop r14
+	ret
+	.size	CAN_readMsg, .-CAN_readMsg
 	.section	.text.loop,"ax",@progbits
 .global	loop
 	.type	loop, @function
@@ -572,11 +596,11 @@ loop:
 	ret
 	.size	loop, .-loop
 	.section	.rodata.setup.str1.1,"aMS",@progbits,1
-.LC0:
-	.string	"let's serial \n"
 .LC1:
-	.string	"init fail\n"
+	.string	"let's serial \n"
 .LC2:
+	.string	"init fail\n"
+.LC3:
 	.string	"CAN init\n"
 	.section	.text.setup,"ax",@progbits
 .global	setup
@@ -597,33 +621,33 @@ setup:
 	ldi r25,hi8(Serial)
 	call _ZN14HardwareSerial5beginEmh
 	call _ZN8SPIClass5beginEv
-	ldi r24,lo8(.LC0)
-	ldi r25,hi8(.LC0)
+	ldi r24,lo8(.LC1)
+	ldi r25,hi8(.LC1)
 	push r25
 	push r24
 	call printfSerial
 	pop __tmp_reg__
 	pop __tmp_reg__
-	ldi r28,lo8(.LC1)
-	ldi r29,hi8(.LC1)
-.L35:
+	ldi r28,lo8(.LC2)
+	ldi r29,hi8(.LC2)
+.L36:
 	call _Z5beginv
 	tst r24
-	breq .L34
+	breq .L35
 	push r29
 	push r28
 	call printfSerial
 	pop __tmp_reg__
 	pop __tmp_reg__
-	rjmp .L35
-.L34:
+	rjmp .L36
+.L35:
 	ldi r22,lo8(16)
 	ldi r23,lo8(39)
 	ldi r24,0
 	ldi r25,0
 	call OsEE_atmega_startTimer1
-	ldi r24,lo8(.LC2)
-	ldi r25,hi8(.LC2)
+	ldi r24,lo8(.LC3)
+	ldi r25,hi8(.LC3)
 	push r25
 	push r24
 	call printfSerial
@@ -650,7 +674,7 @@ main:
 	ldi r24,lo8(-1)
 	out 0x1c,r24
 /* #APP */
- ;  127 "C:\Users\HONGKE~1\DOCUME~1\GitHub\test\01B7CE~1.SEN\CANFD_~1\bsw.cpp" 1
+ ;  132 "C:\Users\HONGKE~1\DOCUME~1\GitHub\L5D26D~1.CAN\01B7CE~1.SEN\CANFD_~1\bsw.cpp" 1
 	sei
  ;  0 "" 2
 /* #NOAPP */
@@ -692,15 +716,15 @@ _GLOBAL__sub_D_CAN:
 	lds r24,CAN+35
 	lds r25,CAN+35+1
 	sbiw r24,0
-	breq .L39
+	breq .L40
 	call _ZdaPv
-.L39:
+.L40:
 	lds r24,CAN+17
 	lds r25,CAN+17+1
 	sbiw r24,0
-	breq .L38
+	breq .L39
 	jmp _ZdaPv
-.L38:
+.L39:
 /* epilogue start */
 	ret
 	.size	_GLOBAL__sub_D_CAN, .-_GLOBAL__sub_D_CAN

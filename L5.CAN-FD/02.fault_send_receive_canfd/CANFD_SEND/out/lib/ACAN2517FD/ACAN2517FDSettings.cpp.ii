@@ -1,7 +1,7 @@
-# 1 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
+# 1 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
+# 1 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
 
 
 
@@ -437,7 +437,7 @@ class ACAN2517FDSettings {
 
 
 } ;
-# 9 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 2
+# 9 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 2
 
 
 
@@ -487,9 +487,9 @@ mDataBitRateFactor (inDataBitRateFactor) {
     const uint32_t maxTQCount = MAX_ARBITRATION_PHASE_SEGMENT_1 + MAX_ARBITRATION_PHASE_SEGMENT_2 + 1 ;
     uint32_t BRP = MAX_BRP ;
     uint32_t smallestError = 
-# 57 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 3 4
+# 57 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 3 4
                             (0x7fffffffLU * 2UL + 1UL) 
-# 57 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
+# 57 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
                                        ;
     uint32_t bestBRP = 1 ;
     uint32_t bestTQCount = 4 ;
@@ -545,9 +545,9 @@ mDataBitRateFactor (inDataBitRateFactor) {
     const uint32_t maxDataTQCount = MAX_DATA_PHASE_SEGMENT_1 + MAX_DATA_PHASE_SEGMENT_2 ;
     const uint32_t desiredDataBitRate = inDesiredArbitrationBitRate * uint8_t (inDataBitRateFactor) ;
     uint32_t smallestError = 
-# 111 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 3 4
+# 111 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp" 3 4
                             (0x7fffffffLU * 2UL + 1UL) 
-# 111 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\test\\L5. CAN-FD\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
+# 111 "C:\\Users\\hongkerous2619\\Documents\\GitHub\\L5.CAN-FD_solution\\02.fault_send_receive_canfd\\CANFD_SEND\\lib\\ACAN2517FD\\ACAN2517FDSettings.cpp"
                                        ;
     uint32_t bestBRP = MAX_BRP ;
     uint32_t bestDataTQCount = maxDataTQCount ;

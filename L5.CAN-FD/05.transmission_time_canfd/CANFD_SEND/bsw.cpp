@@ -10,7 +10,7 @@
 #define LEN_BUF 128
 #define TIMER1_US	10000U	
 //write here//
-#define SET_BPS 5UL * 1000UL
+#define SET_BPS 500UL * 1000UL
 DataBitRateFactor dataBitRate = DataBitRateFactor::x8;
 /////////////
 

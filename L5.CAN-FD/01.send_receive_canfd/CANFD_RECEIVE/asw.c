@@ -11,8 +11,8 @@ TASK(Task1) {
 	
 	struct can_fd_msg receive_msg ={0};
 	
-	if(CAN_checkMsg() == true) {
-
+	if(CAN_checkMsg()) {
+		
 		 if (CAN_readMsg(&receive_msg))
 		 {
 			printfSerial("--------------------------------------------------\n");
@@ -23,11 +23,12 @@ TASK(Task1) {
 				printfSerial("%c", receive_msg.buf[i]);
 			}
 			printfSerial("\n");
+			free(receive_msg.buf);
 		}
-
+		
 	}
 	
-
+	
 
 	TerminateTask();
 };

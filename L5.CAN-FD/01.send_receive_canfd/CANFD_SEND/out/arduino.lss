@@ -4832,9 +4832,9 @@ Disassembly of section .text:
     269a:	e1 2c       	mov	r14, r1
     269c:	f1 2c       	mov	r15, r1
     269e:	08 e0       	ldi	r16, 0x08	; 8
-    26a0:	28 e4       	ldi	r18, 0x48	; 72
-    26a2:	38 ee       	ldi	r19, 0xE8	; 232
-    26a4:	41 e0       	ldi	r20, 0x01	; 1
+    26a0:	20 e2       	ldi	r18, 0x20	; 32
+    26a2:	31 ea       	ldi	r19, 0xA1	; 161
+    26a4:	47 e0       	ldi	r20, 0x07	; 7
     26a6:	50 e0       	ldi	r21, 0x00	; 0
     26a8:	64 e0       	ldi	r22, 0x04	; 4
     26aa:	ce 01       	movw	r24, r28
