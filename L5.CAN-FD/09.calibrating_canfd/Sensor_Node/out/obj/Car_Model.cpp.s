@@ -16,10 +16,12 @@ control_yaw:
 	push r13
 	push r14
 	push r15
+	push r16
+	push r17
 /* prologue: function */
 /* frame size = 0 */
-/* stack size = 4 */
-.L__stack_usage = 4
+/* stack size = 6 */
+.L__stack_usage = 6
 	movw r12,r22
 	movw r14,r24
 	ldi r18,101
@@ -48,48 +50,69 @@ control_yaw:
 	mov r14,r13
 	mov r15,r13
 .L3:
-	movw r24,r14
-	movw r22,r12
-	ldi r18,lo8(5)
+	ldi r26,lo8(40)
+	ldi r27,0
+	movw r20,r14
+	movw r18,r12
+	call __muluhisi3
+	ldi r18,lo8(100)
 	ldi r19,0
 	ldi r20,0
 	ldi r21,0
 	call __divmodsi4
-	lds r24,base_yaw
-	lds r25,base_yaw+1
-	lds r26,base_yaw+2
-	lds r27,base_yaw+3
-	add r24,r18
-	adc r25,r19
-	adc r26,r20
-	adc r27,r21
-	cpi r24,105
+	lds r22,base_yaw
+	lds r23,base_yaw+1
+	lds r24,base_yaw+2
+	lds r25,base_yaw+3
+	add r22,r18
+	adc r23,r19
+	adc r24,r20
+	adc r25,r21
+	cpi r22,105
 	ldi r18,1
-	cpc r25,r18
-	cpc r26,__zero_reg__
-	cpc r27,__zero_reg__
+	cpc r23,r18
+	cpc r24,__zero_reg__
+	cpc r25,__zero_reg__
 	brlt .L4
-	ldi r24,lo8(104)
-	ldi r25,lo8(1)
-	ldi r26,0
-	ldi r27,0
+	ldi r22,lo8(104)
+	ldi r23,lo8(1)
+	ldi r24,0
+	ldi r25,0
 .L4:
-	cpi r24,-104
+	cpi r22,-104
 	ldi r18,-2
-	cpc r25,r18
+	cpc r23,r18
 	ldi r18,-1
-	cpc r26,r18
-	cpc r27,r18
+	cpc r24,r18
+	cpc r25,r18
 	brge .L5
-	ldi r24,lo8(-104)
-	ldi r25,lo8(-2)
-	ldi r26,lo8(-1)
-	ldi r27,lo8(-1)
+	ldi r22,lo8(-104)
+	ldi r23,lo8(-2)
+	ldi r24,lo8(-1)
+	ldi r25,lo8(-1)
 .L5:
-	sts base_yaw,r24
-	sts base_yaw+1,r25
-	sts base_yaw+2,r26
-	sts base_yaw+3,r27
+	movw r16,r22
+	movw r18,r24
+	sbrs r25,7
+	rjmp .L7
+	clr r16
+	clr r17
+	movw r18,r16
+	sub r16,r22
+	sbc r17,r23
+	sbc r18,r24
+	sbc r19,r25
+.L7:
+	cpi r16,-55
+	cpc r17,__zero_reg__
+	cpc r18,__zero_reg__
+	cpc r19,__zero_reg__
+	brge .L6
+	sts base_yaw,r22
+	sts base_yaw+1,r23
+	sts base_yaw+2,r24
+	sts base_yaw+3,r25
+.L8:
 	push r15
 	push r14
 	push r13
@@ -110,11 +133,24 @@ control_yaw:
 	pop __tmp_reg__
 	pop __tmp_reg__
 /* epilogue start */
+	pop r17
+	pop r16
 	pop r15
 	pop r14
 	pop r13
 	pop r12
 	ret
+.L6:
+	ldi r18,lo8(2)
+	ldi r19,0
+	ldi r20,0
+	ldi r21,0
+	call __divmodsi4
+	sts base_yaw,r18
+	sts base_yaw+1,r19
+	sts base_yaw+2,r20
+	sts base_yaw+3,r21
+	rjmp .L8
 	.size	control_yaw, .-control_yaw
 	.section	.rodata.control_temperature.str1.1,"aMS",@progbits,1
 .LC2:
@@ -142,14 +178,14 @@ control_temperature:
 	cpc __zero_reg__,r23
 	cpc __zero_reg__,r24
 	cpc __zero_reg__,r25
-	brlt .L7
+	brlt .L10
 	cpi r22,-100
 	ldi r18,-1
 	cpc r23,r18
 	cpc r24,r18
 	cpc r25,r18
 	brge .+2
-	rjmp .L13
+	rjmp .L18
 	clr r12
 	clr r13
 	movw r14,r12
@@ -157,7 +193,7 @@ control_temperature:
 	sbc r13,r23
 	sbc r14,r24
 	sbc r15,r25
-.L7:
+.L10:
 	push r15
 	push r14
 	push r13
@@ -182,7 +218,7 @@ control_temperature:
 	cpc r14,__zero_reg__
 	cpc r15,__zero_reg__
 	breq .+2
-	rjmp .L8
+	rjmp .L11
 	ldi r22,lo8(45)
 	ldi r23,0
 	ldi r24,0
@@ -200,11 +236,45 @@ control_temperature:
 	adc r9,r19
 	adc r10,r20
 	adc r11,r21
-.L14:
+.L19:
 	sts base_temp,r8
 	sts base_temp+1,r9
 	sts base_temp+2,r10
 	sts base_temp+3,r11
+	lds r24,base_temp
+	lds r25,base_temp+1
+	lds r26,base_temp+2
+	lds r27,base_temp+3
+	cpi r24,19
+	cpc r25,__zero_reg__
+	cpc r26,__zero_reg__
+	cpc r27,__zero_reg__
+	brlt .L13
+	sbiw r24,1
+	sbc r26,__zero_reg__
+	sbc r27,__zero_reg__
+	sts base_temp,r24
+	sts base_temp+1,r25
+	sts base_temp+2,r26
+	sts base_temp+3,r27
+.L13:
+	lds r24,base_temp
+	lds r25,base_temp+1
+	lds r26,base_temp+2
+	lds r27,base_temp+3
+	cpi r24,18
+	cpc r25,__zero_reg__
+	cpc r26,__zero_reg__
+	cpc r27,__zero_reg__
+	brge .L14
+	adiw r24,1
+	adc r26,__zero_reg__
+	adc r27,__zero_reg__
+	sts base_temp,r24
+	sts base_temp+1,r25
+	sts base_temp+2,r26
+	sts base_temp+3,r27
+.L14:
 	lds r22,base_temp
 	lds r23,base_temp+1
 	lds r24,base_temp+2
@@ -213,23 +283,23 @@ control_temperature:
 	cpc r23,__zero_reg__
 	cpc r24,__zero_reg__
 	cpc r25,__zero_reg__
-	brlt .L10
+	brlt .L15
 	ldi r22,lo8(-106)
 	ldi r23,0
 	ldi r24,0
 	ldi r25,0
-.L10:
+.L15:
 	cpi r22,-40
 	ldi r18,-1
 	cpc r23,r18
 	cpc r24,r18
 	cpc r25,r18
-	brge .L11
+	brge .L16
 	ldi r22,lo8(-40)
 	ldi r23,lo8(-1)
 	ldi r24,lo8(-1)
 	ldi r25,lo8(-1)
-.L11:
+.L16:
 	sts base_temp,r22
 	sts base_temp+1,r23
 	sts base_temp+2,r24
@@ -244,14 +314,14 @@ control_temperature:
 	pop r9
 	pop r8
 	ret
-.L13:
+.L18:
 	ldi r24,lo8(100)
 	mov r12,r24
 	mov r13,__zero_reg__
 	mov r14,__zero_reg__
 	mov r15,__zero_reg__
-	rjmp .L7
-.L8:
+	rjmp .L10
+.L11:
 	ldi r26,lo8(3)
 	ldi r27,0
 	movw r20,r14
@@ -266,35 +336,35 @@ control_temperature:
 	sbc r9,r19
 	sbc r10,r20
 	sbc r11,r21
-	rjmp .L14
+	rjmp .L19
 	.size	control_temperature, .-control_temperature
 	.section	.rodata.control_rpm.str1.1,"aMS",@progbits,1
 .LC3:
 	.string	"throttle: %ld, gear: %ld\n"
 	.section	.rodata
 .LC0:
-	.byte	-84
-	.byte	13
-	.byte	0
-	.byte	0
-	.byte	-72
-	.byte	11
-	.byte	0
-	.byte	0
-	.byte	-60
-	.byte	9
-	.byte	0
-	.byte	0
-	.byte	-48
-	.byte	7
-	.byte	0
-	.byte	0
-	.byte	-36
-	.byte	5
-	.byte	0
-	.byte	0
-	.byte	-80
+	.byte	76
 	.byte	4
+	.byte	0
+	.byte	0
+	.byte	40
+	.byte	10
+	.byte	0
+	.byte	0
+	.byte	-28
+	.byte	12
+	.byte	0
+	.byte	0
+	.byte	16
+	.byte	14
+	.byte	0
+	.byte	0
+	.byte	-40
+	.byte	14
+	.byte	0
+	.byte	0
+	.byte	-8
+	.byte	17
 	.byte	0
 	.byte	0
 	.section	.text.control_rpm,"ax",@progbits
@@ -317,16 +387,16 @@ control_rpm:
 	push r29
 	in r28,__SP_L__
 	in r29,__SP_H__
-	sbiw r28,28
+	sbiw r28,32
 	in __tmp_reg__,__SREG__
 	cli
 	out __SP_H__,r29
 	out __SREG__,__tmp_reg__
 	out __SP_L__,r28
 /* prologue: function */
-/* frame size = 28 */
-/* stack size = 42 */
-.L__stack_usage = 42
+/* frame size = 32 */
+/* stack size = 46 */
+.L__stack_usage = 46
 	movw r4,r22
 	movw r6,r24
 	movw r10,r24
@@ -336,19 +406,19 @@ control_rpm:
 	cpc r5,__zero_reg__
 	cpc r6,__zero_reg__
 	cpc r7,__zero_reg__
-	brlt .L16
+	brlt .L21
 	ldi r22,lo8(100)
 	mov r8,r22
 	mov r9,__zero_reg__
 	mov r10,__zero_reg__
 	mov r11,__zero_reg__
-.L16:
+.L21:
 	sbrs r11,7
-	rjmp .L17
+	rjmp .L22
 	mov r8,__zero_reg__
 	mov r9,__zero_reg__
 	movw r10,r8
-.L17:
+.L22:
 	movw r12,r18
 	movw r14,r20
 	ldi r25,7
@@ -356,23 +426,33 @@ control_rpm:
 	cpc r13,__zero_reg__
 	cpc r14,__zero_reg__
 	cpc r15,__zero_reg__
-	brlt .L18
-	ldi r18,lo8(6)
-	mov r12,r18
+	brlt .L23
+	ldi r20,lo8(6)
+	mov r12,r20
 	mov r13,__zero_reg__
 	mov r14,__zero_reg__
 	mov r15,__zero_reg__
-.L18:
+.L23:
 	cp __zero_reg__,r12
 	cpc __zero_reg__,r13
 	cpc __zero_reg__,r14
 	cpc __zero_reg__,r15
-	brlt .L19
+	brlt .L24
 	mov r12,__zero_reg__
 	mov r13,__zero_reg__
 	movw r14,r12
 	inc r12
-.L19:
+.L24:
+	ldi r24,lo8(24)
+	ldi r30,lo8(.LC0)
+	ldi r31,hi8(.LC0)
+	movw r26,r28
+	adiw r26,1
+	0:
+	ld r0,Z+
+	st X+,r0
+	dec r24
+	brne 0b
 	push r15
 	push r14
 	push r13
@@ -386,16 +466,6 @@ control_rpm:
 	push r25
 	push r24
 	call printfSerial
-	ldi r24,lo8(24)
-	ldi r30,lo8(.LC0)
-	ldi r31,hi8(.LC0)
-	movw r26,r28
-	adiw r26,1
-	0:
-	ld r0,Z+
-	st X+,r0
-	dec r24
-	brne 0b
 	ldi r24,lo8(7)
 	ldi r25,0
 	ldi r26,0
@@ -406,10 +476,80 @@ control_rpm:
 	sbc r19,r13
 	sbc r20,r14
 	sbc r21,r15
-	std Y+25,r18
-	std Y+26,r19
-	std Y+27,r20
-	std Y+28,r21
+	std Y+29,r18
+	std Y+30,r19
+	std Y+31,r20
+	std Y+32,r21
+	in __tmp_reg__,__SREG__
+	cli
+	out __SP_H__,r29
+	out __SREG__,__tmp_reg__
+	out __SP_L__,r28
+	lds r24,base_rpm
+	lds r25,base_rpm+1
+	lds r26,base_rpm+2
+	lds r27,base_rpm+3
+	std Y+25,r24
+	std Y+26,r25
+	std Y+27,r26
+	std Y+28,r27
+	cp __zero_reg__,r4
+	cpc __zero_reg__,r5
+	cpc __zero_reg__,r6
+	cpc __zero_reg__,r7
+	brge .+2
+	rjmp .L25
+	andi r24,3
+	clr r25
+	clr r26
+	clr r27
+	or r24,r25
+	or r24,r26
+	or r24,r27
+	breq .+2
+	rjmp .L25
+	ldi r26,lo8(-50)
+	ldi r27,lo8(-1)
+	ldd r18,Y+29
+	ldd r19,Y+30
+	ldd r20,Y+31
+	ldd r21,Y+32
+	call __mulohisi3
+	ldd r18,Y+25
+	ldd r19,Y+26
+	ldd r20,Y+27
+	ldd r21,Y+28
+	add r22,r18
+	adc r23,r19
+	adc r24,r20
+	adc r25,r21
+	sts base_rpm,r22
+	sts base_rpm+1,r23
+	sts base_rpm+2,r24
+	sts base_rpm+3,r25
+.L26:
+	ldi r26,lo8(5)
+	ldi r27,0
+	movw r20,r10
+	movw r18,r8
+	call __muluhisi3
+	ldd r18,Y+29
+	ldd r19,Y+30
+	ldd r20,Y+31
+	ldd r21,Y+32
+	call __divmodsi4
+	lds r24,base_rpm
+	lds r25,base_rpm+1
+	lds r26,base_rpm+2
+	lds r27,base_rpm+3
+	add r24,r18
+	adc r25,r19
+	adc r26,r20
+	adc r27,r21
+	sts base_rpm,r24
+	sts base_rpm+1,r25
+	sts base_rpm+2,r26
+	sts base_rpm+3,r27
 	ldi r19,1
 	sub r12,r19
 	sbc r13,__zero_reg__
@@ -425,87 +565,27 @@ control_rpm:
 	adc r21,r29
 	add r12,r20
 	adc r13,r21
-	ldi r26,lo8(10)
-	ldi r27,0
-	movw r20,r10
-	movw r18,r8
-	call __muluhisi3
-	in __tmp_reg__,__SREG__
-	cli
-	out __SP_H__,r29
-	out __SREG__,__tmp_reg__
-	out __SP_L__,r28
-	ldd r18,Y+25
-	ldd r19,Y+26
-	ldd r20,Y+27
-	ldd r21,Y+28
-	call __divmodsi4
 	movw r30,r12
-	ld r12,Z
-	ldd r13,Z+1
-	ldd r14,Z+2
-	ldd r15,Z+3
-	add r12,r18
-	adc r13,r19
-	adc r14,r20
-	adc r15,r21
-	cp __zero_reg__,r4
-	cpc __zero_reg__,r5
-	cpc __zero_reg__,r6
-	cpc __zero_reg__,r7
-	brge .+2
-	rjmp .L20
-	ldi r26,lo8(-50)
-	ldi r27,lo8(-1)
-	ldd r18,Y+25
-	ldd r19,Y+26
-	ldd r20,Y+27
-	ldd r21,Y+28
-	call __mulohisi3
-	lds r8,base_rpm
-	lds r9,base_rpm+1
-	lds r10,base_rpm+2
-	lds r11,base_rpm+3
-	movw r26,r24
-	movw r24,r22
-	add r24,r8
-	adc r25,r9
-	adc r26,r10
-	adc r27,r11
-	sts base_rpm,r24
-	sts base_rpm+1,r25
-	sts base_rpm+2,r26
-	sts base_rpm+3,r27
-.L21:
-	lds r8,base_rpm
-	lds r9,base_rpm+1
-	lds r10,base_rpm+2
-	lds r11,base_rpm+3
-	ldi r22,0
-	ldi r23,0
-	movw r24,r22
-	sbrc r11,7
-	rjmp .L22
-	movw r24,r14
-	movw r22,r12
-	subi r22,24
-	sbci r23,-4
-	sbci r24,-1
-	sbci r25,-1
-	cp r8,r22
-	cpc r9,r23
-	cpc r10,r24
-	cpc r11,r25
-	brge .L22
-	movw r24,r10
-	movw r22,r8
-.L22:
-	sts base_rpm,r22
-	sts base_rpm+1,r23
-	sts base_rpm+2,r24
-	sts base_rpm+3,r25
+	ld r20,Z
+	ldd r21,Z+1
+	ldd r22,Z+2
+	ldd r23,Z+3
+	cp r24,r20
+	cpc r25,r21
+	cpc r26,r22
+	cpc r27,r23
+	brge .L27
+	sts base_rpm,r20
+	sts base_rpm+1,r21
+	sts base_rpm+2,r22
+	sts base_rpm+3,r23
+.L27:
+	lds r22,base_rpm
+	lds r23,base_rpm+1
+	lds r24,base_rpm+2
+	lds r25,base_rpm+3
 /* epilogue start */
-	adiw r28,28
+	adiw r28,32
 	in __tmp_reg__,__SREG__
 	cli
 	out __SP_H__,r29
@@ -526,12 +606,19 @@ control_rpm:
 	pop r5
 	pop r4
 	ret
-.L20:
-	sts base_rpm,r12
-	sts base_rpm+1,r13
-	sts base_rpm+2,r14
-	sts base_rpm+3,r15
-	rjmp .L21
+.L25:
+	ldd r24,Y+25
+	ldd r25,Y+26
+	ldd r26,Y+27
+	ldd r27,Y+28
+	adiw r24,1
+	adc r26,__zero_reg__
+	adc r27,__zero_reg__
+	sts base_rpm,r24
+	sts base_rpm+1,r25
+	sts base_rpm+2,r26
+	sts base_rpm+3,r27
+	rjmp .L26
 	.size	control_rpm, .-control_rpm
 .global	base_rpm
 	.section	.data.base_rpm,"aw",@progbits

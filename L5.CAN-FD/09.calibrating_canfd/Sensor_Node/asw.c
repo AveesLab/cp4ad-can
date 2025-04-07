@@ -9,7 +9,6 @@ ISR2(TimerISR)
     IncrementCounter(counter1);
 }
 
-int count = 0;
 
 bool isFirst = true;
 
@@ -37,8 +36,25 @@ TASK(Task1) {
 		/////////////////////////////
 		isFirst=false;
 	}
-	
-	if(count % 2 ==0)
+
+
+	if (CAN_checkMsg() && CAN_readMsg(&msg))
+	{
+		handle_simple_tlv(&msg); 
+		/////write here///////
+		//hint : input list
+		//----------input list-----------
+		// car_input.pan_power
+		// car_input.throttle_position
+		// car_input.steer
+		// car_input.gear_position
+		current_yaw = control_yaw(                   );
+		current_temp = control_temperature(          );
+		current_rpm = control_rpm(          ,        );
+		
+		/////////////////////////////////////////
+	}
+	else
 	{	
 		unsigned char buf_send[24];
 		//////////////write here /////////////////////
@@ -96,26 +112,8 @@ TASK(Task1) {
 		/////////////////////////////////////////////////////////
 		send_simple_tlv(can_id, value_type, buf_send, value_len);
 	}
-	else
-	{
-		if (CAN_checkMsg() && CAN_readMsg(&msg))
-		{
-			handle_simple_tlv(&msg); 
-			/////write here///////
-			//hint : input list
-			//----------input list-----------
-			// car_input.pan_power
-			// car_input.throttle_position
-			// car_input.steer
-			// car_input.gear_position
-			current_yaw = control_yaw(                   );
-			current_temp = control_temperature(          );
-			current_rpm = control_rpm(          ,        );
-			
-			/////////////////////////////////////////
-		}
-	}
-	count++;
+
+
 	TerminateTask();
 };
 
