@@ -13,7 +13,7 @@ TASK(Task1) {
 	uint32_t int_data = 2025040200; //0 ~ 4,294,967,295
 
 	struct can_msg send_msg = {0};
-	send_msg.id = 0x040;
+	send_msg.id = 0x123;
 	unsigned char len = 4;
 	send_msg.len = len;
 
